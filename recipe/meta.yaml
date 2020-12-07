@@ -21,7 +21,7 @@ requirements:
     - python >=3.0
   run:
     - numpy >=1.16.2
-    - openpyxl >=3.0.0
+    - openpyxl <=2.6.4
     - pandas >=0.2
     - python >=3.0
     - python-libsbml >=5.17.0
