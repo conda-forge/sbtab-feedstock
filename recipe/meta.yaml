@@ -1,5 +1,5 @@
 {% set name = "sbtab" %}
-{% set version = "0.9.78" %}
+{% set version = "0.9.79" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sbtab-{{ version }}.tar.gz
-  sha256: b071ea2d9831827766bd6b7451ec244d97e24ac288423d6dcf395dc6955b4812
+  sha256: c57daae7164ea9f0aeb96d23acefb37716ef4b234531863a4747eb09312076a5
 
 build:
   number: 0
