@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sbtab-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sbtab-{{ version }}.tar.gz
   sha256: 16554b5373feaed704efc116117ed7674d3a7f945b457b8d4cb00b188b1b1eb5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
     - pip
-    - python >=3.0
+    - python {{ python_min }}
   run:
     - numpy >=1.16.2
     - openpyxl >=3.0
     - pandas >=1.0
-    - python >=3.0
+    - python >={{ python_min }}
     - python-libsbml >=5.17
     - scipy >=1.0
 
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://www.sbtab.net
